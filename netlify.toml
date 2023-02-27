@@ -1,5 +1,5 @@
 [template.environment]
-  MEDUSA_BACKEND_URL="https://streampay-store.herokuapp.com/"
+  MEDUSA_BACKEND_URL="https://streampay-shop-admin.netlify.app"
 
 [build]
   publish = "public/"
