@@ -2,6 +2,8 @@
   <a href="https://www.medusa-commerce.com">
     <img alt="StreamPay" src="https://i.imgur.com/3jUHsfu.png" width="100" />
   </a>
+<p align="center">
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/a0fe7fb4-dce9-4706-8280-d8a0e6160391/deploy-status)](https://app.netlify.com/sites/stream-ecommerce-admin/deploys)
 </p>
 <h1 align="center">
   StreamPay Admin
