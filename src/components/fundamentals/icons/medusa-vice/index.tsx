@@ -28,8 +28,8 @@ const MedusaVice: React.FC<IconProps> = ({
           y2="63.1913"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#0968E5" />
-          <stop offset="1" stopColor="#091970" />
+          <stop stopColor="#091970" />
+          <stop offset="1" stopColor="#0968E5" />
         </linearGradient>
       </defs>
     </svg>

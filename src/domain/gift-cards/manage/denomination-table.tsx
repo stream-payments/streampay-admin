@@ -90,7 +90,7 @@ const DenominationTable: React.FC<DenominationTableProps> = ({
   }
 
   return (
-    <div className="w-full h-full overflow-y-auto">
+    <div className="h-full w-full overflow-y-auto">
       <Table>
         <Table.Head>
           <Table.HeadRow>
@@ -105,7 +105,7 @@ const DenominationTable: React.FC<DenominationTableProps> = ({
       {selectedDenom && (
         <DeletePrompt
           handleClose={() => setSelectedDenom(null)}
-          text="Are you sure you want to delete this denomination from your Medusa Store?"
+          text="Are you sure you want to delete this denomination from your StreamPay Store?"
           heading="Delete denomination"
           onDelete={() => handleDeleteDenomination()}
           successText="Successfully deleted denomination"

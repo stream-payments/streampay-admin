@@ -9,15 +9,14 @@ export default {
 
 const GiftCardRes = {
   id: "prod_01FSM2R78R63VKXFAG3G7F52CD",
-  title: "Tekla Gift Card",
+  title: "StreamPay Gift Card",
   subtitle: null,
   description:
-    "For the one partial to blank canvases, spontaneity, chance encounters and plot twists. The Tekla Gift Card is available in either digital or hard-copy format.",
+    "For the one partial to blank canvases, spontaneity, chance encounters and plot twists. The StreamPay Gift Card is available in either digital or hard-copy format.",
   handle: "tekla-gift-card",
   is_giftcard: true,
   status: "published",
-  thumbnail:
-    "https://images.ctfassets.net/4g6al16haqoj/kZT0jwrTOTGbDpK3XlRZQ/acb10c53c1acdd53cf1336b5f26fbb10/giftcard.jpg",
+  thumbnail: "https://i.imgur.com/b4XFxGu.png",
   variants: [
     {
       id: "variant_01FSM2R7EVZR9MRNWBC5WB14RT",

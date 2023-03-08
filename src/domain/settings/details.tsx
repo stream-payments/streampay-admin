@@ -81,31 +81,31 @@ const AccountDetails = () => {
           title="Store Details"
           subtitle="Manage your business details"
         >
-          <h6 className="mt-large inter-base-semibold">General</h6>
+          <h6 className="inter-base-semibold mt-large">General</h6>
           <Input
             className="mt-base"
             label="Store name"
             {...register("name")}
-            placeholder="Medusa Store"
+            placeholder="StreamPay Store"
           />
-          <h6 className="mt-2xlarge inter-base-semibold">Advanced settings</h6>
+          <h6 className="inter-base-semibold mt-2xlarge">Advanced settings</h6>
           <Input
             className="mt-base"
             label="Swap link template"
             {...register("swap_link_template")}
-            placeholder="https://acme.inc/swap={swap_id}"
+            placeholder="https://admin.streampay.shop/swap={swap_id}"
           />
           <Input
             className="mt-base"
             label="Draft order link template"
             {...register("payment_link_template")}
-            placeholder="https://acme.inc/payment={payment_id}"
+            placeholder="https://admin.streampay.shop/payment={payment_id}"
           />
           <Input
             className="mt-base"
             label="Invite link template"
             {...register("invite_link_template")}
-            placeholder="https://acme-admin.inc/invite?token={invite_token}"
+            placeholder="https://admin.streampay.shop/invite?token={invite_token}"
           />
         </BodyCard>
       </div>
