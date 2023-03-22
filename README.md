@@ -3,7 +3,7 @@
   </a>
 </p>
 <h1 align="center">
-  StreamPay Admin
+  StreamPay Admin UI
 </h1>
 <p align="center">
 Headless commerce platform
