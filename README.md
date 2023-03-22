@@ -1,6 +1,7 @@
 <p align="center">
   <a href="https://admin.streampay.shop">
     <img alt="StreamPay" src="https://i.imgur.com/3jUHsfu.png" width="100" />
+    [![Netlify Status](https://api.netlify.com/api/v1/badges/19482eb1-f817-47f2-98eb-c54683b7075b/deploy-status)](https://app.netlify.com/sites/stream-commerce-admin-ui/deploys)
   </a>
 </p>
 <h1 align="center">
