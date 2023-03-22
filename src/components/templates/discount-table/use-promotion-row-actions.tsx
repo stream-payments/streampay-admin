@@ -55,8 +55,7 @@ const usePromotionActions = (promotion) => {
               onSuccess: () => {
                 notification(
                   "Success",
-                  `Successfully ${
-                    promotion.is_disabled ? "published" : "unpublished"
+                  `Successfully ${promotion.is_disabled ? "published" : "unpublished"
                   } discount`,
                   "success"
                 )

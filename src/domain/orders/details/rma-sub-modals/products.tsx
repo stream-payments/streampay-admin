@@ -66,11 +66,11 @@ const RMASelectProductSubModal: React.FC<RMASelectProductSubModalProps> = ({
         Cell: ({ row: { original } }) => {
           return (
             <div className="flex items-center">
-              <div className="my-1.5 mr-4 flex h-[40px] w-[30px] items-center">
+              <div className="h-[40px] w-[30px] my-1.5 flex items-center mr-4">
                 {original.product.thumbnail ? (
                   <img
                     src={original.product.thumbnail}
-                    className="h-full rounded-soft object-cover"
+                    className="h-full object-cover rounded-soft"
                   />
                 ) : (
                   <ImagePlaceholder />

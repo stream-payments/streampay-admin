@@ -22,8 +22,9 @@ type TCollapsibleTreeContext = {
   toggle: () => void
 }
 
-const CollapsibleTreeContext =
-  React.createContext<TCollapsibleTreeContext | null>(null)
+const CollapsibleTreeContext = React.createContext<TCollapsibleTreeContext | null>(
+  null
+)
 
 export const CollapsibleTree: CollapsibleTreeType = ({ children }) => {
   const [open, setOpen] = React.useState(false)
@@ -65,7 +66,7 @@ const CollapsibleTreeContent: React.FC<CollapsibleTreeContentProps> = ({
   return (
     <div
       className={clsx(
-        "mt-xsmall pl-5",
+        "pl-5 mt-xsmall",
         {
           hidden: !open,
           "animate-fade-in-top": open,
@@ -98,7 +99,7 @@ const CollapsibleTreeParent: React.FC<CollapsibleTreeParentProps> = ({
     <div>
       <Container className={className}>
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-x-small">{children}</div>
+          <div className="gap-x-small flex items-center">{children}</div>
           <div className="flex items-center gap-x-xsmall">
             {actions && (
               <Actionables customTrigger={Trigger()} actions={actions} />
@@ -136,16 +137,16 @@ const CollapsibleTreeLeaf: React.FC<CollapsibleTreeLeafProps> = ({
   return (
     <div
       className={clsx(
-        "col-tree relative flex items-center pb-xsmall last:pb-0",
+        "col-tree flex items-center relative pb-xsmall last:pb-0",
         className
       )}
     >
       <div className="absolute top-0 left-0 bottom-0">
-        <div className="h-1/2 w-px border-l border-dashed border-grey-20" />
-        <div className="bottom-half-dash h-1/2 w-px border-l border-dashed border-grey-20" />
+        <div className="border-l border-dashed border-grey-20 h-1/2 w-px" />
+        <div className="h-1/2 border-l border-dashed border-grey-20 w-px bottom-half-dash" />
       </div>
-      <div className="mr-xsmall h-px w-[13px] border-t border-dashed border-grey-20" />
-      <Container className="inter-small-regular flex w-full items-center justify-between">
+      <div className="w-[13px] h-px border-t border-grey-20 border-dashed mr-xsmall" />
+      <Container className="w-full flex items-center justify-between inter-small-regular">
         {children}
         {actions && (
           <Actionables

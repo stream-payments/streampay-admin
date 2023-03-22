@@ -36,7 +36,7 @@ const SalesChannelsModal = ({ open, source = [], onClose, onSave }: Props) => {
           </Modal.Header>
           <AvailableScreen />
           <Modal.Footer>
-            <div className="flex w-full items-center justify-end">
+            <div className="flex items-center justify-end w-full">
               <Button
                 variant="primary"
                 size="small"

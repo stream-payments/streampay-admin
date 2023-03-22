@@ -58,8 +58,10 @@ export const RegionTaxForm = ({ region }: RegionTaxFormProps) => {
     })
   }, [region])
 
-  const { isLoading: isProvidersLoading, tax_providers } =
-    useAdminStoreTaxProviders()
+  const {
+    isLoading: isProvidersLoading,
+    tax_providers,
+  } = useAdminStoreTaxProviders()
 
   const updateRegion = useAdminUpdateRegion(region.id)
 
@@ -106,8 +108,8 @@ export const RegionTaxForm = ({ region }: RegionTaxFormProps) => {
   }
 
   return (
-    <form className="flex flex-1 flex-col" onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex flex-1 flex-col gap-base">
+    <form className="flex flex-col flex-1" onSubmit={handleSubmit(onSubmit)}>
+      <div className="flex flex-col gap-base flex-1">
         <Controller
           name="tax_provider_id"
           control={control}
@@ -123,7 +125,7 @@ export const RegionTaxForm = ({ region }: RegionTaxFormProps) => {
             />
           )}
         />
-        <div className="item-center flex gap-x-1.5">
+        <div className="flex item-center gap-x-1.5">
           <Checkbox
             className="inter-base-regular"
             {...register("automatic_taxes")}
@@ -131,11 +133,11 @@ export const RegionTaxForm = ({ region }: RegionTaxFormProps) => {
           />
           <IconTooltip
             content={
-              "When checked Medusa will automatically apply tax calculations to Carts in this Region. When unchecked you will have to manually compute taxes at checkout. Manual taxes are recommended if using a 3rd party tax provider to avoid performing too many requests"
+              "When checked StreamPay will automatically apply tax calculations to Carts in this Region. When unchecked you will have to manually compute taxes at checkout. Manual taxes are recommended if using a 3rd party tax provider to avoid performing too many requests"
             }
           />
         </div>
-        <div className="item-center flex gap-x-1.5">
+        <div className="flex item-center gap-x-1.5">
           <Checkbox
             className="inter-base-regular"
             {...register("gift_cards_taxable")}
@@ -143,7 +145,7 @@ export const RegionTaxForm = ({ region }: RegionTaxFormProps) => {
           />
           <IconTooltip
             content={
-              "When checked taxes will be applied to gift cards on checkout. In some contries tax regulations require that taxes are applied to gift cards on purchase."
+              "When checked taxes will be applied to gift cards on checkout. In some countries tax regulations require that taxes are applied to gift cards on purchase."
             }
           />
         </div>

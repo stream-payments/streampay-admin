@@ -6,9 +6,9 @@ const SettingsOverview: React.FC<React.PropsWithChildren> = ({ children }) => {
     <div>
       <PageDescription
         title={"Settings"}
-        subtitle={"Manage the settings for your StreamPay store"}
+        subtitle={"Manage the settings for StreamPay store"}
       />
-      <div className="grid auto-cols-fr grid-cols-1 gap-x-base gap-y-xsmall medium:grid-cols-2">
+      <div className="grid medium:grid-cols-2 auto-cols-fr grid-cols-1 gap-x-base gap-y-xsmall">
         {children}
       </div>
     </div>

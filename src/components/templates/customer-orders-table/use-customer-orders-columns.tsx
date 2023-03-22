@@ -78,7 +78,7 @@ export const useCustomerOrdersColumns = (): Column<Order>[] => {
                 {visibleItems.map((item) => {
                   return (
                     <Tooltip content={item.title} key={item.id}>
-                      <div className="flex h-[35px] w-[25px] items-center justify-center overflow-hidden rounded-rounded">
+                      <div className="h-[35px] w-[25px] flex items-center justify-center rounded-rounded overflow-hidden">
                         {item.thumbnail ? (
                           <img
                             className="object-cover"
@@ -94,7 +94,7 @@ export const useCustomerOrdersColumns = (): Column<Order>[] => {
                 })}
               </div>
               {remainder > 0 && (
-                <span className="inter-small-regular text-grey-40">
+                <span className="text-grey-40 inter-small-regular">
                   + {remainder} more
                 </span>
               )}

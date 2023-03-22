@@ -36,8 +36,9 @@ const RMAEditAddressSubModal: React.FC<RMAEditAddressSubModalProps> = ({
 }) => {
   const { pop } = useContext(LayeredModalContext)
 
-  const { register, handleSubmit, control, reset } =
-    useForm<RMAEditAddressSubModalFormData>()
+  const { register, handleSubmit, control, reset } = useForm<
+    RMAEditAddressSubModalFormData
+  >()
 
   const { region } = useAdminRegion(order.region_id)
 
@@ -109,7 +110,7 @@ const RMAEditAddressSubModal: React.FC<RMAEditAddressSubModalProps> = ({
               </div>
               <div className="mt-8">
                 <span className="inter-base-semibold">Shipping Address</span>
-                <div className="my-4 grid gap-y-base">
+                <div className="grid gap-y-base my-4">
                   <Input
                     {...register("address_1", {
                       required: true,

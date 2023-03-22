@@ -17,9 +17,9 @@ type displaySetting = {
 }
 
 const DisplaySettingsDateDescription = ({ date }: { date: Date }) => (
-  <div className="inter-small-regular flex text-grey-50 ">
+  <div className="flex text-grey-50 inter-small-regular ">
     {moment.utc(date).format("ddd, DD MMM YYYY")}
-    <span className="ml-3 flex items-center">
+    <span className="flex items-center ml-3">
       <ClockIcon size={16} />
       <span className="ml-2.5">{moment.utc(date).format("UTC HH:mm")}</span>
     </span>
@@ -27,7 +27,7 @@ const DisplaySettingsDateDescription = ({ date }: { date: Date }) => (
 )
 
 const CommonDescription = ({ text }) => (
-  <span className="inter-small-regular text-grey-50">{text}</span>
+  <span className="text-grey-50 inter-small-regular">{text}</span>
 )
 
 const useDiscountConfigurations = (discount: Discount) => {

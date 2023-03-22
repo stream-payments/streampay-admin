@@ -41,14 +41,14 @@ function ListIndicator(props: ListIndicatorProps) {
   return (
     <div
       className={clsx(
-        "flex h-[18px] w-[18px] flex-shrink-0 items-center justify-center rounded-circle border bg-white",
+        "flex justify-center items-center flex-shrink-0 w-[18px] h-[18px] bg-white border rounded-circle",
         {
           "border-2 border-violet-60": isActive,
         }
       )}
     >
       {isActive && (
-        <div className="h-[10px] w-[10px] rounded-circle bg-violet-60" />
+        <div className="w-[10px] h-[10px] bg-violet-60 rounded-circle" />
       )}
     </div>
   )
@@ -61,11 +61,11 @@ function DisabledLabel() {
   return (
     <div
       className="
-      flex h-[28px]
-      w-[54px]
-      items-center
-      justify-center rounded-xl bg-grey-10
-      text-small font-semibold text-grey-50"
+      w-[54px] h-[28px]
+      rounded-xl
+      bg-grey-10
+      flex items-center justify-center
+      text-grey-50 text-small font-semibold"
     >
       Draft
     </div>
@@ -89,7 +89,7 @@ function SalesChannelTile(props: SalesChannelTileProps) {
     <div
       onClick={onClick}
       className={clsx(
-        "mb-2 flex h-[83px] cursor-pointer justify-between rounded-lg border p-4",
+        "mb-2 p-4 cursor-pointer rounded-lg border flex justify-between h-[83px]",
         {
           "border-2 border-violet-60": isSelected,
         }
@@ -110,7 +110,7 @@ function SalesChannelTile(props: SalesChannelTileProps) {
         </div>
       </div>
       {isDisabled && (
-        <div className="flex flex-shrink-0 flex-col justify-center">
+        <div className="flex flex-col justify-center flex-shrink-0">
           <DisabledLabel />
         </div>
       )}
@@ -144,11 +144,11 @@ function SalesChannelsHeader(props: SalesChannelsHeaderProps) {
   }
 
   return (
-    <div className="mb-6 h-[55px] overflow-hidden">
+    <div className="h-[55px] mb-6 overflow-hidden">
       <div className={clsx("transition-all duration-200", classes)}>
         <div className="h-[55px]">
-          <div className="mb-1 flex items-center justify-between">
-            <h2 className="text-xlarge font-semibold text-grey-90">
+          <div className="flex items-center justify-between mb-1">
+            <h2 className="font-semibold text-xlarge text-grey-90">
               Sales channels
             </h2>
             <div className="flex items-center justify-between gap-4">
@@ -164,19 +164,19 @@ function SalesChannelsHeader(props: SalesChannelsHeaderProps) {
               />
             </div>
           </div>
-          <div className="mb-6 block max-w-[100%] overflow-hidden truncate text-small text-grey-50">
+          <div className="text-grey-50 text-small mb-6 block overflow-hidden truncate max-w-[100%]">
             Control which products are available in which channels
           </div>
         </div>
 
-        <div className="my-[5px] flex h-[40px] w-full items-center justify-around gap-2 rounded-xl border bg-grey-5 px-4 text-grey-40">
+        <div className="h-[40px] my-[5px] w-full flex items-center justify-around gap-2 text-grey-40 bg-grey-5 px-4 rounded-xl border">
           <SearchIcon size={20} />
           <input
             ref={inputRef}
             value={filterText}
             onChange={(e) => setFilterText(e.target.value)}
             placeholder="Search by title or description"
-            className="remove-number-spinner w-full bg-inherit font-normal leading-base text-grey-90 placeholder-grey-40 caret-violet-60 outline-none outline-0"
+            className="w-full font-normal outline-none bg-inherit outline-0 remove-number-spinner leading-base text-grey-90 caret-violet-60 placeholder-grey-40"
             onBlur={() => setShowFilter(!!filterText)}
             autoComplete="off"
           />
@@ -210,7 +210,7 @@ function SalesChannelsList(props: SalesChannelsListProps) {
   } = props
 
   return (
-    <div className="col-span-1 h-[968px] rounded-lg border border-grey-20 bg-grey-0 px-8 py-6">
+    <div className="col-span-1 rounded-lg border bg-grey-0 border-grey-20 px-8 py-6 h-[968px]">
       <SalesChannelsHeader
         filterText={filterText}
         setFilterText={setFilterText}
@@ -302,7 +302,7 @@ function SalesChannelDetailsHeader(props: SalesChannelDetailsHeaderProps) {
 
   return (
     <div className="flex items-center justify-between">
-      <h2 className="mb-4 text-xlarge font-semibold text-grey-90">
+      <h2 className="mb-4 font-semibold text-xlarge text-grey-90">
         {salesChannel.name}
       </h2>
       <div className="flex items-center justify-between gap-4">
@@ -338,7 +338,7 @@ function SalesChannelDetails(props: SalesChannelDetailsProps) {
     useToggleState(false)
 
   return (
-    <div className="col-span-2 h-[968px] rounded-rounded border border-grey-20 bg-grey-0 px-8 py-6">
+    <div className="col-span-2 rounded-rounded border bg-grey-0 border-grey-20 px-8 py-6 h-[968px]">
       <SalesChannelDetailsHeader
         isDefault={isDefault}
         resetDetails={resetDetails}

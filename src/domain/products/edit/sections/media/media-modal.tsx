@@ -82,7 +82,7 @@ const MediaModal = ({ product, open, onClose }: Props) => {
           <Modal.Content>
             <div>
               <h2 className="inter-large-semibold mb-2xsmall">Media</h2>
-              <p className="inter-base-regular mb-large text-grey-50">
+              <p className="inter-base-regular text-grey-50 mb-large">
                 Add images to your product.
               </p>
               <div>
@@ -91,7 +91,7 @@ const MediaModal = ({ product, open, onClose }: Props) => {
             </div>
           </Modal.Content>
           <Modal.Footer>
-            <div className="flex w-full justify-end gap-x-2">
+            <div className="flex gap-x-2 justify-end w-full">
               <Button
                 size="small"
                 variant="secondary"

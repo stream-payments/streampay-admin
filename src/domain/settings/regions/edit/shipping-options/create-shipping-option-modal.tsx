@@ -76,7 +76,7 @@ const CreateShippingOptionModal = ({ open, onClose, region }: Props) => {
             <ShippingOptionForm form={form} region={region} />
           </Modal.Content>
           <Modal.Footer>
-            <div className="flex w-full items-center justify-end gap-x-xsmall">
+            <div className="w-full flex items-center gap-x-xsmall justify-end">
               <Button
                 variant="secondary"
                 size="small"

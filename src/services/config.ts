@@ -1,3 +1,3 @@
-const medusaUrl = __MEDUSA_BACKEND_URL__ || "https://admin.streampay.shop"
+const medusaUrl = __MEDUSA_BACKEND_URL__ || "https://stream-commerce-backend.herokuapp.com"
 
 export { medusaUrl }

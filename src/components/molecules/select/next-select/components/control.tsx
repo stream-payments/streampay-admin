@@ -38,7 +38,7 @@ const Control = <
           "control--menu-is-open": menuIsOpen,
         },
         clsx(
-          "border-gray-20 box-border flex overflow-hidden rounded-rounded border bg-grey-5 p-0 pl-small transition-colors focus-within:border-violet-60 focus-within:shadow-cta",
+          "flex p-0 overflow-hidden rounded-rounded border border-gray-20 bg-grey-5 focus-within:shadow-cta transition-colors focus-within:border-violet-60 box-border pl-small",
           {
             "h-xlarge": size === "sm",
             "h-10": size === "md" || !size,
@@ -50,7 +50,7 @@ const Control = <
     >
       <div
         className={clsx(
-          "flex flex-1 items-center",
+          "flex items-center flex-1",
           customStyles?.inner_control
         )}
       >

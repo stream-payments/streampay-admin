@@ -15,8 +15,11 @@ import ExistingConditionTableActions from "../../condition-table-actions"
 const ProductTagsConditionsTable = () => {
   const params = useQueryFilters(defaultQueryProps)
 
-  const { condition, removeConditionResources, isLoading } =
-    useEditConditionContext()
+  const {
+    condition,
+    removeConditionResources,
+    isLoading,
+  } = useEditConditionContext()
 
   const {
     isLoading: isLoadingTags,

@@ -16,7 +16,8 @@ const GiftCardRes = {
   handle: "tekla-gift-card",
   is_giftcard: true,
   status: "published",
-  thumbnail: "https://i.imgur.com/b4XFxGu.png",
+  thumbnail:
+    "https://images.ctfassets.net/4g6al16haqoj/kZT0jwrTOTGbDpK3XlRZQ/acb10c53c1acdd53cf1336b5f26fbb10/giftcard.jpg",
   variants: [
     {
       id: "variant_01FSM2R7EVZR9MRNWBC5WB14RT",

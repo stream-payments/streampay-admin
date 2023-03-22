@@ -38,7 +38,7 @@ const BodyCard: React.FC<BodyCardProps> = ({
   return (
     <div
       className={clsx(
-        "flex h-full w-full flex-col overflow-hidden rounded-rounded border border-grey-20 bg-grey-0",
+        "rounded-rounded border bg-grey-0 border-grey-20 overflow-hidden flex flex-col h-full w-full",
         { "min-h-[350px]": !compact },
         className
       )}
@@ -46,14 +46,14 @@ const BodyCard: React.FC<BodyCardProps> = ({
     >
       <div className="relative">
         {isScrolled && (
-          <div className="absolute top-0 left-0 right-0 z-10 h-xlarge rounded-t-rounded bg-gradient-to-b from-grey-0 to-[rgba(255,255,255,0)]" />
+          <div className="absolute rounded-t-rounded top-0 left-0 right-0 bg-gradient-to-b from-grey-0 to-[rgba(255,255,255,0)] h-xlarge z-10" />
         )}
       </div>
       <div
-        className="pt-medium flex grow flex-col overflow-y-auto px-xlarge"
+        className="pt-medium px-xlarge flex flex-col grow overflow-y-auto"
         onScroll={scrollListener}
       >
-        <div className="mt-6 flex h-xlarge items-center justify-between">
+        <div className="flex items-center justify-between mt-6 h-xlarge">
           {customHeader ? (
             <div>{customHeader}</div>
           ) : title ? (
@@ -87,14 +87,14 @@ const BodyCard: React.FC<BodyCardProps> = ({
         )}
       </div>
       {events && events.length > 0 ? (
-        <div className="border-t border-grey-20 px-xlarge pb-large pt-base">
-          <div className="flex flex-row-reverse items-center">
+        <div className="pb-large pt-base px-xlarge border-t border-grey-20">
+          <div className="flex items-center flex-row-reverse">
             {events.map((event, i: React.Key) => {
               return (
                 <Button
                   key={i}
                   onClick={event.onClick}
-                  className="min-w-[130px] justify-center first:ml-xsmall"
+                  className="first:ml-xsmall min-w-[130px] justify-center"
                   variant={i === 0 ? "primary" : "ghost"}
                   size={"small"}
                   type={event.type}

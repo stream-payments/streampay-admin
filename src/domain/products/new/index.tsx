@@ -155,7 +155,7 @@ const NewProduct = ({ onClose }: Props) => {
     <form className="w-full">
       <FocusModal>
         <FocusModal.Header>
-          <div className="flex w-full justify-between px-8 medium:w-8/12">
+          <div className="medium:w-8/12 w-full px-8 flex justify-between">
             <Button
               size="small"
               variant="ghost"
@@ -164,7 +164,7 @@ const NewProduct = ({ onClose }: Props) => {
             >
               <CrossIcon size={20} />
             </Button>
-            <div className="flex gap-x-small">
+            <div className="gap-x-small flex">
               <Button
                 size="small"
                 variant="secondary"
@@ -186,8 +186,8 @@ const NewProduct = ({ onClose }: Props) => {
             </div>
           </div>
         </FocusModal.Header>
-        <FocusModal.Main className="no-scrollbar flex w-full justify-center">
-          <div className="my-16 max-w-[700px] small:w-4/5 medium:w-7/12 large:w-6/12">
+        <FocusModal.Main className="w-full no-scrollbar flex justify-center">
+          <div className="medium:w-7/12 large:w-6/12 small:w-4/5 max-w-[700px] my-16">
             <Accordion defaultValue={["general"]} type="multiple">
               <Accordion.Item
                 value={"general"}
@@ -226,7 +226,7 @@ const NewProduct = ({ onClose }: Props) => {
                 </div>
               </Accordion.Item>
               <Accordion.Item title="Variants" value="variants">
-                <p className="inter-base-regular text-grey-50">
+                <p className="text-grey-50 inter-base-regular">
                   Add variations of this product.
                   <br />
                   Offer your customers different options for color, format,
@@ -254,14 +254,14 @@ const NewProduct = ({ onClose }: Props) => {
                 </div>
               </Accordion.Item>
               <Accordion.Item title="Thumbnail" value="thumbnail">
-                <p className="inter-base-regular mb-large text-grey-50">
+                <p className="inter-base-regular text-grey-50 mb-large">
                   Used to represent your product during checkout, social sharing
                   and more.
                 </p>
                 <ThumbnailForm form={nestedForm(form, "thumbnail")} />
               </Accordion.Item>
               <Accordion.Item title="Media" value="media">
-                <p className="inter-base-regular mb-large text-grey-50">
+                <p className="inter-base-regular text-grey-50 mb-large">
                   Add images to your product.
                 </p>
                 <MediaForm form={nestedForm(form, "media")} />

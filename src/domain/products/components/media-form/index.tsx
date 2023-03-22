@@ -146,7 +146,7 @@ const Image = ({ image, index, form, remove }: ImageProps) => {
           <div className="relative">
             <button
               className={clsx(
-                "group flex items-center justify-between rounded-rounded px-base py-xsmall hover:bg-grey-5",
+                "px-base py-xsmall group hover:bg-grey-5 rounded-rounded flex items-center justify-between",
                 {
                   "bg-grey-5": value,
                 }
@@ -155,14 +155,14 @@ const Image = ({ image, index, form, remove }: ImageProps) => {
               onClick={() => onChange(!value)}
             >
               <div className="flex items-center gap-x-large">
-                <div className="flex h-16 w-16 items-center justify-center">
+                <div className="w-16 h-16 flex items-center justify-center">
                   <img
                     src={image.url}
                     alt={image.name || "Uploaded image"}
-                    className="max-h-[64px] max-w-[64px] rounded-rounded"
+                    className="max-w-[64px] max-h-[64px] rounded-rounded"
                   />
                 </div>
-                <div className="inter-small-regular flex flex-col text-left">
+                <div className="flex flex-col inter-small-regular text-left">
                   <p>{image.name}</p>
                   <p className="text-grey-50">
                     {image.size ? `${(image.size / 1024).toFixed(2)} KB` : ""}
@@ -197,7 +197,7 @@ type ModalActionsProps = {
 
 const ModalActions = ({ number, onRemove, onDeselect }: ModalActionsProps) => {
   return (
-    <div className="flex h-10 items-center overflow-y-hidden pr-1">
+    <div className="h-10 overflow-y-hidden flex items-center pr-1">
       <div
         className={clsx(
           "flex items-center gap-x-small transition-all duration-200",
@@ -208,7 +208,7 @@ const ModalActions = ({ number, onRemove, onDeselect }: ModalActionsProps) => {
         )}
       >
         <span>{number} selected</span>
-        <div className="h-5 w-px bg-grey-20" />
+        <div className="w-px h-5 bg-grey-20" />
         <div className="flex items-center gap-x-xsmall">
           <Button
             variant="secondary"

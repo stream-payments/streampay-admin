@@ -34,7 +34,8 @@ export const GiftCard = Template.bind({})
 GiftCard.args = {
   cardArgs: {
     title: "StreamPay Gift Card",
-    thumbnail: "https://i.imgur.com/b4XFxGu.png",
+    thumbnail:
+      "https://images.ctfassets.net/4g6al16haqoj/kZT0jwrTOTGbDpK3XlRZQ/acb10c53c1acdd53cf1336b5f26fbb10/giftcard.jpg",
     actions: [
       {
         label: "Edit",
@@ -54,14 +55,16 @@ GiftCard.args = {
       },
     ],
   },
-  text: "For the one partial to blank canvases, spontaneity, chance encounters and plot twists. The StreamPay Gift Card is available in either digital or hard-copy format.",
+  text:
+    "For the one partial to blank canvases, spontaneity, chance encounters and plot twists. The StreamPay Gift Card is available in either digital or hard-copy format.",
 }
 
 export const GiftCardWithLongText = Template.bind({})
 GiftCardWithLongText.args = {
   cardArgs: {
     title: "StreamPay Gift Card",
-    thumbnail: "https://i.imgur.com/b4XFxGu.png",
+    thumbnail:
+      "https://images.ctfassets.net/4g6al16haqoj/kZT0jwrTOTGbDpK3XlRZQ/acb10c53c1acdd53cf1336b5f26fbb10/giftcard.jpg",
     actions: [
       {
         label: "Edit",
@@ -81,5 +84,6 @@ GiftCardWithLongText.args = {
       },
     ],
   },
-  text: "For the one partial to blank canvases, spontaneity, chance encounters and plot twists. The StreamPay Gift Card is available in either digital or hard-copy format. For the one partial to blank canvases, spontaneity, chance encounters and plot twists. The StreamPay Gift Card is available in either digital or hard-copy format. For the one partial to blank canvases, spontaneity, chance encounters and plot twists. The StreamPay Gift Card is available in either digital or hard-copy format.",
+  text:
+    "For the one partial to blank canvases, spontaneity, chance encounters and plot twists. The StreamPay Gift Card is available in either digital or hard-copy format. For the one partial to blank canvases, spontaneity, chance encounters and plot twists. The StreamPay Gift Card is available in either digital or hard-copy format. For the one partial to blank canvases, spontaneity, chance encounters and plot twists. The StreamPay Gift Card is available in either digital or hard-copy format.",
 }

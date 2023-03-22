@@ -51,12 +51,12 @@ const DatePicker: React.FC<DateTimePickerProps> = ({
         <PopoverPrimitive.Trigger asChild>
           <button
             className={clsx("w-full rounded-rounded border ", {
-              "border-violet-60 shadow-input": isOpen,
+              "shadow-input border-violet-60": isOpen,
               "border-grey-20": !isOpen,
             })}
           >
-            <InputContainer className="shadown-none border-0 focus-within:shadow-none">
-              <div className="flex w-full justify-between pr-0.5 text-grey-50">
+            <InputContainer className="border-0 shadown-none focus-within:shadow-none">
+              <div className="w-full flex text-grey-50 pr-0.5 justify-between">
                 <InputHeader
                   {...{
                     label,
@@ -76,15 +76,15 @@ const DatePicker: React.FC<DateTimePickerProps> = ({
         <PopoverPrimitive.Content
           side="top"
           sideOffset={8}
-          className="w-full rounded-rounded  border border-grey-20 bg-grey-0 px-8 shadow-dropdown"
+          className="rounded-rounded px-8  border border-grey-20 bg-grey-0 w-full shadow-dropdown"
         >
           <CalendarComponent date={tempDate} onChange={setTempDate} />
-          <div className="mb-8 mt-5 flex w-full">
+          <div className="flex w-full mb-8 mt-5">
             <Button
               variant="ghost"
               size="medium"
               onClick={() => setIsOpen(false)}
-              className="mr-2 flex w-1/3 justify-center border border-grey-20"
+              className="mr-2 w-1/3 flex justify-center border border-grey-20"
             >
               Cancel
             </Button>
@@ -92,7 +92,7 @@ const DatePicker: React.FC<DateTimePickerProps> = ({
               size="medium"
               variant="primary"
               onClick={() => submitDate()}
-              className="flex w-2/3 justify-center"
+              className="w-2/3 flex justify-center"
             >{`Set ${label}`}</Button>
           </div>
         </PopoverPrimitive.Content>

@@ -41,10 +41,6 @@ const providerDescriptors: { [providerKey: string]: Option } = {
     label: "Klarna",
     value: "klarna",
   },
-  streampay: {
-    label: "StreamPay",
-    value: "stream-pay",
-  },
   "paywithgoogle-adyen": {
     label: "GooglePay via Adyen",
     value: "paywithgoogle-adyen",

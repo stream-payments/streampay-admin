@@ -32,7 +32,7 @@ const Actionables: React.FC<ActionablesProps> = ({
               <Button
                 variant="ghost"
                 size="small"
-                className="h-xlarge w-xlarge focus:shadow-none focus-visible:border-violet-60 focus-visible:shadow-input focus-visible:outline-none"
+                className="w-xlarge h-xlarge focus-visible:outline-none focus-visible:shadow-input focus-visible:border-violet-60 focus:shadow-none"
               >
                 <MoreHorizontalIcon size={20} />
               </Button>
@@ -43,7 +43,7 @@ const Actionables: React.FC<ActionablesProps> = ({
 
           <DropdownMenu.Content
             sideOffset={5}
-            className="z-30 min-w-[200px] rounded-rounded border border-grey-20 bg-grey-0 p-xsmall shadow-dropdown"
+            className="border bg-grey-0 border-grey-20 rounded-rounded shadow-dropdown p-xsmall min-w-[200px] z-30"
           >
             {actions.map((action, i) => {
               return (
@@ -52,9 +52,9 @@ const Actionables: React.FC<ActionablesProps> = ({
                     <Button
                       variant="ghost"
                       size="small"
-                      className={clsx("flex w-full justify-start", {
+                      className={clsx("w-full justify-start flex", {
                         "text-rose-50": action?.variant === "danger",
-                        "pointer-events-none select-none opacity-50":
+                        "opacity-50 select-none pointer-events-none":
                           action?.disabled,
                       })}
                       onClick={action?.onClick}

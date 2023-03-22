@@ -26,7 +26,7 @@ const Type = () => {
             <RadioGroup.Root
               value={value ?? undefined}
               onValueChange={onChange}
-              className="accordion-margin-transition flex items-center gap-base group-radix-state-open:mt-5"
+              className="flex items-center gap-base group-radix-state-open:mt-5 accordion-margin-transition"
             >
               <RadioGroup.Item
                 value={PriceListType.SALE}

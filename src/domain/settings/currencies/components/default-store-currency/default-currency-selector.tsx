@@ -16,10 +16,11 @@ type DefaultStoreCurrencyFormType = {
 }
 
 const DefaultCurrencySelector = ({ store }: Props) => {
-  const { reset, control, handleSubmit } =
-    useForm<DefaultStoreCurrencyFormType>({
-      defaultValues: getDefaultValue(store),
-    })
+  const { reset, control, handleSubmit } = useForm<
+    DefaultStoreCurrencyFormType
+  >({
+    defaultValues: getDefaultValue(store),
+  })
 
   const { mutate } = useAdminUpdateStore()
   const notification = useNotification()

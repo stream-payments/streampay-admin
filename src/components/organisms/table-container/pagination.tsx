@@ -33,7 +33,7 @@ export const TablePagination = ({
     <SkeletonProvider isLoading={isLoading}>
       <div
         className={
-          "inter-small-regular flex w-full justify-between text-grey-50"
+          "flex w-full justify-between inter-small-regular text-grey-50"
         }
       >
         <Skeleton>
@@ -43,16 +43,16 @@ export const TablePagination = ({
           <Skeleton>
             <div>{`${currentPage} of ${soothedPageCount}`}</div>
           </Skeleton>
-          <div className="flex items-center space-x-4">
+          <div className="flex space-x-4 items-center">
             <button
-              className="cursor-pointer disabled:cursor-default disabled:text-grey-30"
+              className="cursor-pointer disabled:text-grey-30 disabled:cursor-default"
               disabled={!hasPrev || isLoading}
               onClick={() => prevPage()}
             >
               <ArrowLeftIcon />
             </button>
             <button
-              className="cursor-pointer disabled:cursor-default disabled:text-grey-30"
+              className="cursor-pointer disabled:text-grey-30 disabled:cursor-default"
               disabled={!hasNext || isLoading}
               onClick={() => nextPage()}
             >

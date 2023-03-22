@@ -42,7 +42,7 @@ export const useCurrencyColumns = (): Column<Currency>[] => {
         accessor: "name",
         Cell: ({ row, value }) => {
           return (
-            <div className="inter-small-regular flex items-center gap-x-xsmall">
+            <div className="flex items-center gap-x-xsmall inter-small-regular">
               <span className="inter-small-semibold">
                 {row.original.code.toUpperCase()}
               </span>

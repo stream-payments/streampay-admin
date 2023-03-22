@@ -27,11 +27,12 @@ const testProduct: Pick<Product, "title" | "id" | "thumbnail"> & {
 } = {
   id: "prod_01FY6FS3VB39G5GPB75S7RYQW6",
   title: "StreamPay Sweatshirt",
-  thumbnail: "https://i.imgur.com/hdJdcgI.png",
+  thumbnail:
+    "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatshirt-vintage-front.png",
   variants: [
     {
       id: "variant_01FY6FS3VWFWNQF8WSP130F3TX",
-      title: "WHITE / S",
+      title: "BLACK / S",
       sku: "STREAMPAY-S",
       prices: [
         {
@@ -83,7 +84,7 @@ const testProduct: Pick<Product, "title" | "id" | "thumbnail"> & {
     {
       id: "variant_01FY6FS3XBQ64A4TBX0N8NGZZK",
       title: "BLACK / XL",
-      sku: "STRAMPAY-XL",
+      sku: "STREAMPAY-XL",
       prices: [],
     },
   ],

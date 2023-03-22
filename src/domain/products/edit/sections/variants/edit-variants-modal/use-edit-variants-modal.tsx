@@ -4,8 +4,9 @@ type EditVariantsModalContext = {
   onClose: () => void
 }
 
-export const EditVariantsModalContext =
-  React.createContext<EditVariantsModalContext | null>(null)
+export const EditVariantsModalContext = React.createContext<EditVariantsModalContext | null>(
+  null
+)
 
 export const useEditVariantsModal = () => {
   const context = useContext(EditVariantsModalContext)

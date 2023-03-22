@@ -40,9 +40,9 @@ function AddSalesChannelsSection(props: AddSalesChannelsSectionProps) {
 
   return (
     <div>
-      <div className="flex items-center justify-between">
+      <div className="flex justify-between items-center">
         <div>
-          <h5 className="inter-base-semibold pb-1 text-grey-90">
+          <h5 className="inter-base-semibold text-grey-90 pb-1">
             Sales channels
           </h5>
           <p className="text-grey-50">
@@ -63,8 +63,8 @@ function AddSalesChannelsSection(props: AddSalesChannelsSectionProps) {
       {hasSelectedChannels && (
         <div className="mt-10 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="rounded border p-1">
-              <div className="rounded bg-gray-100 p-2">
+            <div className="rounded p-1 border">
+              <div className="bg-gray-100 p-2 rounded">
                 <ChannelsIcon />
               </div>
             </div>
@@ -151,11 +151,11 @@ function CreatePublishableKey(props: CreatePublishableKeyProps) {
   return (
     <FocusModal>
       <FocusModal.Header>
-        <div className="flex w-full justify-between px-8 medium:w-8/12">
+        <div className="medium:w-8/12 w-full px-8 flex justify-between">
           <Button size="small" variant="ghost" onClick={closeModal}>
             <CrossIcon size={20} />
           </Button>
-          <div className="flex gap-x-small">
+          <div className="gap-x-small flex">
             <Button
               size="small"
               variant="primary"
@@ -169,15 +169,15 @@ function CreatePublishableKey(props: CreatePublishableKeyProps) {
         </div>
       </FocusModal.Header>
 
-      <FocusModal.Main className="no-scrollbar flex w-full justify-center">
-        <div className="my-16 max-w-[700px] small:w-4/5 medium:w-7/12 large:w-6/12">
-          <h1 className="inter-xlarge-semibold pb-8 text-grey-90">
+      <FocusModal.Main className="w-full no-scrollbar flex justify-center">
+        <div className="medium:w-7/12 large:w-6/12 small:w-4/5 max-w-[700px] my-16">
+          <h1 className="inter-xlarge-semibold text-grey-90 pb-8">
             Create API Key
           </h1>
-          <h5 className="inter-base-semibold pb-1 text-grey-90">
+          <h5 className="inter-base-semibold text-grey-90 pb-1">
             General Information
           </h5>
-          <p className="pb-8 text-grey-50">
+          <p className="text-grey-50 pb-8">
             Create and manage API keys. Right now this is only related to sales
             channels.
           </p>
@@ -191,7 +191,7 @@ function CreatePublishableKey(props: CreatePublishableKeyProps) {
             onChange={(ev) => setName(ev.target.value)}
           />
 
-          <div className="mt-16 mb-8 h-[1px] w-[100%] bg-gray-200" />
+          <div className="w-[100%] h-[1px] bg-gray-200 mt-16 mb-8" />
 
           <AddSalesChannelsSection
             selectedChannels={selectedChannels}

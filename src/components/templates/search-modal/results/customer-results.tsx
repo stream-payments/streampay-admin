@@ -29,16 +29,16 @@ const CustomerResults = ({
                 index: offset + index,
               })}
               className={clsx(
-                "group rounded-rounded px-base py-1.5 focus:bg-grey-5",
+                "px-base group py-1.5 focus:bg-grey-5 rounded-rounded",
                 { "bg-grey-5": selected === offset + index }
               )}
             >
               <Link
                 to={`/a/customers/${customer.id}`}
-                className="flex items-center justify-between rounded-rounded py-1.5"
+                className="py-1.5 flex items-center rounded-rounded justify-between"
               >
                 <div className="flex items-center gap-x-3">
-                  <div className="h-[20px] w-[20px] shrink-0">
+                  <div className="w-[20px] h-[20px] shrink-0">
                     <Avatar user={customer} />
                   </div>
                   <p className="inter-small-regular text-grey-90">
@@ -49,7 +49,7 @@ const CustomerResults = ({
                 </div>
                 <span
                   className={clsx(
-                    "inter-small-regular text-grey-40 group-focus:visible",
+                    "group-focus:visible text-grey-40 inter-small-regular",
                     {
                       invisible: selected !== offset + index,
                     }

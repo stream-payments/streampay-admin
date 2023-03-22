@@ -31,7 +31,7 @@ const VariantStockForm = ({ form }: Props) => {
       <p className="inter-base-regular text-grey-50">
         Configure the inventory and stock for this variant.
       </p>
-      <div className="flex flex-col gap-y-xlarge pt-large">
+      <div className="pt-large flex flex-col gap-y-xlarge">
         <div className="flex flex-col gap-y-2xsmall">
           <div className="flex items-center justify-between">
             <h3 className="inter-base-semibold mb-2xsmall">Manage inventory</h3>
@@ -44,13 +44,13 @@ const VariantStockForm = ({ form }: Props) => {
             />
           </div>
           <p className="inter-base-regular text-grey-50">
-            When checked Medusa will regulate the inventory when orders and
+            When checked StreamPay will regulate the inventory when orders and
             returns are made.
           </p>
         </div>
         <div className="flex flex-col gap-y-2xsmall">
           <div className="flex items-center justify-between">
-            <h3 className="inter-base-semibold mb-2xsmall">Allow backorders</h3>
+            <h3 className="inter-base-semibold mb-2xsmall">Allow back orders</h3>
             <Controller
               control={control}
               name={path("allow_backorder")}

@@ -39,7 +39,7 @@ const OSShortcut = ({ winModifiers, macModifiers, keys }: OSShortcutProps) => {
 
   return (
     <div className="flex items-center text-grey-40">
-      <p className="inter-base-semibold m-0">
+      <p className="m-0 inter-base-semibold">
         <span className="inter-base-semibold">{modifiers} </span>
         {input}
       </p>

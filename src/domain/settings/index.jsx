@@ -63,7 +63,7 @@ const SettingsIndex = () => {
       />
       <SettingsCard
         heading={"Personal Information"}
-        description={"Manage your StreamPay profile"}
+        description={"Manage your user profile"}
         icon={<HappyIcon />}
         to={`/a/settings/personal-information`}
       />

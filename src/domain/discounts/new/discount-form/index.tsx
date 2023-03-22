@@ -21,6 +21,7 @@ type DiscountFormProps = {
   closeForm?: () => void
 }
 
+
 const DiscountForm = ({ closeForm }: DiscountFormProps) => {
   const navigate = useNavigate()
   const notification = useNotification()
@@ -66,21 +67,21 @@ const DiscountForm = ({ closeForm }: DiscountFormProps) => {
   return (
     <FocusModal>
       <FocusModal.Header>
-        <div className="flex w-full justify-between px-8 medium:w-8/12">
+        <div className="medium:w-8/12 w-full px-8 flex justify-between">
           <Button
             size="small"
             variant="ghost"
             onClick={closeForm}
-            className="h-8 w-8 rounded-rounded border"
+            className="border rounded-rounded w-8 h-8"
           >
             <CrossIcon size={20} />
           </Button>
-          <div className="flex gap-x-small">
+          <div className="gap-x-small flex">
             <Button
               onClick={handleSubmit(submitGhost)}
               size="small"
               variant="ghost"
-              className="rounded-rounded border"
+              className="border rounded-rounded"
             >
               Save as draft
             </Button>
@@ -96,8 +97,8 @@ const DiscountForm = ({ closeForm }: DiscountFormProps) => {
         </div>
       </FocusModal.Header>
       <FocusModal.Main>
-        <div className="mb-[25%] flex justify-center">
-          <div className="w-full max-w-[700px] pt-16">
+        <div className="flex justify-center mb-[25%]">
+          <div className="max-w-[700px] w-full pt-16">
             <h1 className="inter-xlarge-semibold">Create new discount</h1>
             <Accordion
               className="pt-7 text-grey-90"

@@ -74,17 +74,17 @@ const SearchModal = ({ handleClose }) => {
       <RadixDialog.Portal>
         <RadixDialog.Overlay
           className={clsx(
-            "fixed inset-0 z-50 pt-[140px] pb-[100px] backdrop-blur-sm",
+            "fixed pt-[140px] pb-[100px] z-50 inset-0 backdrop-blur-sm",
             { flex: totalLength > 0 }
           )}
         >
           <RadixDialog.Content
             className={clsx(
-              "mx-auto flex max-w-[640px] flex-1 rounded-rounded bg-grey-0 shadow-searchModal"
+              "max-w-[640px] flex-1 flex mx-auto bg-grey-0 rounded-rounded shadow-searchModal"
             )}
           >
-            <div className="flex flex-1 flex-col py-large">
-              <div className="flex items-center gap-x-4 border-b border-solid border-grey-20 px-xlarge pb-large">
+            <div className="py-large flex-1 flex flex-col">
+              <div className="flex items-center gap-x-4 pb-large border-solid px-xlarge border-b border-grey-20">
                 <SearchIcon className="text-grey-40" />
                 <Input
                   className="flex-1"
@@ -101,14 +101,14 @@ const SearchModal = ({ handleClose }) => {
                   <CrossIcon className="flex text-grey-50" />
                 </Tooltip>
               </div>
-              <KeyboardShortcuts className="inter-small-regular mt-xlarge flex items-center gap-x-3 px-xlarge text-grey-40" />
+              <KeyboardShortcuts className="mt-xlarge px-xlarge flex items-center gap-x-3 text-grey-40 inter-small-regular" />
               {totalLength > 0 ? (
                 <ul
                   {...getULProps()}
-                  className="mt-large flex-1 overflow-y-auto px-xlarge"
+                  className="flex-1 overflow-y-auto mt-large px-xlarge"
                 >
                   {isFetching ? (
-                    <div className="flex w-full items-center justify-center pt-2xlarge">
+                    <div className="w-full pt-2xlarge flex items-center justify-center">
                       <Spinner size={"large"} variant={"secondary"} />
                     </div>
                   ) : (

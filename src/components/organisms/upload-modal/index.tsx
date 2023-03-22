@@ -34,14 +34,14 @@ function FileSummary(props: FileSummaryProps) {
     <div className="relative">
       <div
         style={{ width: `${progress}%` }}
-        className="absolute h-full bg-grey-5 transition-width duration-150 ease-in-out"
+        className="absolute bg-grey-5 h-full transition-width duration-150 ease-in-out"
       />
-      <div className="border-1 relative mt-6 flex items-center rounded-xl border">
+      <div className="relative flex items-center rounded-xl border border-1 mt-6">
         <div className="m-4">
           <FileIcon size={30} fill={progress ? "#9CA3AF" : "#2DD4BF"} />
         </div>
 
-        <div className="my-6 flex-1">
+        <div className="flex-1 my-6">
           <div className="text-small leading-5 text-grey-90">{name}</div>
           <div className="text-xsmall leading-4 text-grey-50">
             {status || formattedSize}
@@ -124,11 +124,11 @@ function DropArea(props: DropAreaProps) {
       onDragOver={onDragOver}
       onDrop={handleFileDrop}
       className={clsx(
-        "mt-3 flex flex-col items-center justify-center rounded-xl border border-dashed p-6",
+        "flex flex-col justify-center items-center border border-dashed rounded-xl mt-3 p-6",
         { "opacity-50": isDragOver }
       )}
     >
-      <span className="text-small text-grey-50">
+      <span className="text-grey-50 text-small">
         Drop your file here, or
         <a className="text-violet-60">
           <label className="cursor-pointer" htmlFor="upload-form-file">
@@ -145,7 +145,7 @@ function DropArea(props: DropAreaProps) {
           />
         </a>
       </span>
-      <span className="text-small text-grey-40">
+      <span className="text-grey-40 text-small">
         Only .csv files are supported.
       </span>
     </div>
@@ -208,19 +208,19 @@ function UploadModal(props: UploadModalProps) {
       <Modal.Body>
         <Modal.Content>
           <div className="flex justify-between">
-            <span className="inter-large-semibold py-4 text-2xl text-grey-90">
+            <span className="text-2xl text-grey-90 inter-large-semibold py-4">
               Import {fileTitle}
             </span>
-            <button onClick={onClose} className="cursor-pointer text-grey-50">
+            <button onClick={onClose} className="text-grey-50 cursor-pointer">
               <CrossIcon size={20} />
             </button>
           </div>
 
-          <div className="inter-large-semibold mb-1 text-base text-grey-90">
+          <div className="text-grey-90 text-base inter-large-semibold mb-1">
             Import {fileTitle}
           </div>
 
-          <p className="mb-4 text-base text-grey-50">{description1Text}</p>
+          <p className="text-grey-50 mb-4 text-base">{description1Text}</p>
 
           {summary && (
             <UploadSummary
@@ -241,25 +241,25 @@ function UploadModal(props: UploadModalProps) {
               // TODO: change this to actual progress once this we can track upload
               progress={100}
               action={
-                <a className="h-6 w-6 cursor-pointer" onClick={removeFile}>
+                <a className="w-6 h-6 cursor-pointer" onClick={removeFile}>
                   <TrashIcon stroke="#9CA3AF" />
                 </a>
               }
             />
           )}
 
-          <div className="inter-large-semibold mt-8 text-base text-grey-90">
+          <div className="text-grey-90 text-base inter-large-semibold mt-8">
             {description2Title}
           </div>
 
-          <p className="mb-2 text-base text-grey-50">{description2Text}</p>
+          <p className="text-grey-50 mb-2 text-base">{description2Text}</p>
 
           <FileSummary
             name="medusa-template.csv"
             size={2967}
             action={
               <a
-                className="h-6 w-6 cursor-pointer"
+                className="w-6 h-6 cursor-pointer"
                 href={templateLink}
                 download
               >
@@ -271,11 +271,11 @@ function UploadModal(props: UploadModalProps) {
           <div className="h-2" />
         </Modal.Content>
         <Modal.Footer>
-          <div className="flex h-8 w-full justify-end">
+          <div className="flex w-full h-8 justify-end">
             <div className="flex gap-2">
               <Button
                 variant="secondary"
-                className="mr-2 justify-center text-small"
+                className="mr-2 text-small justify-center"
                 size="small"
                 onClick={onClose}
               >

@@ -35,12 +35,12 @@ const LoginCard: React.FC<LoginCardProps> = ({ toResetPassword }) => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="flex flex-col items-center">
         <span className="inter-2xlarge-semibold mt-4 text-grey-90">
-          Welcome!
+          StreamPay
         </span>
-        <span className="inter-base-regular mt-2 text-grey-50">
-          StreamPay eCommerce Platform
+        <span className="inter-base-regular text-grey-50 mt-2">
+          eCommerce Platform
         </span>
-        <span className="inter-base-regular mb-xlarge text-grey-50">
+        <span className="inter-base-regular text-grey-50 mb-xlarge">
           Log in to your account below
         </span>
         <SigninInput
@@ -55,12 +55,12 @@ const LoginCard: React.FC<LoginCardProps> = ({ toResetPassword }) => {
           autoComplete="current-password"
         />
         {isInvalidLogin && (
-          <span className="inter-small-regular mt-2 w-full text-rose-50">
+          <span className="text-rose-50 w-full mt-2 inter-small-regular">
             These credentials do not match our records
           </span>
         )}
         <Button
-          className="inter-base-regular mt-4 w-[320px] rounded-rounded"
+          className="rounded-rounded mt-4 w-[320px] inter-base-regular"
           variant="primary"
           size="large"
           type="submit"
@@ -69,7 +69,7 @@ const LoginCard: React.FC<LoginCardProps> = ({ toResetPassword }) => {
           Continue
         </Button>
         <span
-          className="inter-small-regular mt-8 cursor-pointer text-grey-50"
+          className="inter-small-regular text-grey-50 mt-8 cursor-pointer"
           onClick={toResetPassword}
         >
           Reset password

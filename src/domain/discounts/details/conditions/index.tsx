@@ -17,8 +17,11 @@ const DiscountDetailsConditions: React.FC<DiscountDetailsConditionsProps> = ({
 }) => {
   const [show, setShow] = useState(false)
 
-  const { conditions, selectedCondition, deSelectCondition } =
-    useDiscountConditions(discount)
+  const {
+    conditions,
+    selectedCondition,
+    deSelectCondition,
+  } = useDiscountConditions(discount)
 
   return (
     <ConditionsProvider discount={discount}>
@@ -41,7 +44,7 @@ const DiscountDetailsConditions: React.FC<DiscountDetailsConditionsProps> = ({
                 conditions?.length / 2
               )}, minmax(0, 1fr))`,
             }}
-            className="grid grid-flow-col grid-cols-2 gap-y-base gap-x-xlarge"
+            className="grid grid-cols-2 grid-flow-col gap-y-base gap-x-xlarge"
           >
             {conditions.map((condition, i) => (
               <NumberedItem
@@ -54,7 +57,7 @@ const DiscountDetailsConditions: React.FC<DiscountDetailsConditionsProps> = ({
             ))}
           </div>
         ) : (
-          <div className="flex flex-1 flex-col items-center justify-center gap-y-small">
+          <div className="flex flex-col justify-center items-center flex-1 gap-y-small">
             <span className="inter-base-regular text-grey-50">
               This discount has no conditions
             </span>

@@ -32,13 +32,14 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
     if (isCopied) {
       notification("Success", "Copied!", "success")
     }
-  }, [isCopied])
+  }, [isCopied, notification])
 
   return (
     <div className="inter-small-regular flex items-center gap-x-xsmall text-grey-50">
       <Button
         variant="ghost"
         size="small"
+        type="button"
         className={clsx("p-0 text-grey-50", {
           ["text-violet-60"]: isCopied,
         })}

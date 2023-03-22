@@ -40,7 +40,7 @@ export const TablePagination = <T,>({
   return (
     <div
       className={clsx(
-        "inter-small-regular flex items-center justify-between text-grey-50",
+        "inter-small-regular text-grey-50 flex items-center justify-between",
         className
       )}
     >
@@ -53,7 +53,7 @@ export const TablePagination = <T,>({
           <Button
             variant="ghost"
             size="small"
-            className="h-xlarge w-xlarge disabled:text-grey-40"
+            className="w-xlarge h-xlarge disabled:text-grey-40"
             type="button"
             disabled={!getCanPreviousPage()}
             onClick={previousPage}
@@ -63,7 +63,7 @@ export const TablePagination = <T,>({
           <Button
             variant="ghost"
             size="small"
-            className="h-xlarge w-xlarge disabled:text-grey-40"
+            className="w-xlarge h-xlarge disabled:text-grey-40"
             type="button"
             disabled={!getCanNextPage()}
             onClick={nextPage}

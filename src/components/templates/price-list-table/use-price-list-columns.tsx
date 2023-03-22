@@ -54,7 +54,7 @@ export const usePriceListTableColumns = () => {
           return (
             <Table.Cell
               onClick={(e) => e.stopPropagation()}
-              className="flex w-full justify-end"
+              className="w-full flex justify-end"
             >
               <div className="justify-end">
                 <Actionables forceDropdown actions={getActions()} />

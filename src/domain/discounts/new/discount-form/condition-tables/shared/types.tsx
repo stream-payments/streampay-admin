@@ -42,7 +42,7 @@ export const useTypesColumns = () => {
     return [
       {
         Header: () => (
-          <div className="flex min-w-[626px] items-center gap-1">
+          <div className="flex items-center gap-1 min-w-[626px]">
             Type <SortingIcon size={16} />
           </div>
         ),

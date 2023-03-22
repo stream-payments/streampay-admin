@@ -6,8 +6,9 @@ import { SimpleProductType } from "./utils"
 
 const useSortingOptions = (products: SimpleProductType[]) => {
   const [options, setOptions] = useState<FilteringOptionProps[]>([])
-  const [sortedProducts, setSortedProducts] =
-    useState<SimpleProductType[]>(products)
+  const [sortedProducts, setSortedProducts] = useState<SimpleProductType[]>(
+    products
+  )
 
   const sortByTitle = (a: SimpleProductType, b: SimpleProductType) => {
     if (a.title < b.title) {

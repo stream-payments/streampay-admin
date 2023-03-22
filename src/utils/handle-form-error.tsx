@@ -49,7 +49,7 @@ function getFormErrors(errors: DeepMap<FieldValues, FieldError>) {
   }, [])
 
   const list = (
-    <ul className="list-inside list-disc">
+    <ul className="list-disc list-inside">
       {messages.map((m) => (
         <li>{m}</li>
       ))}

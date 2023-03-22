@@ -88,7 +88,7 @@ const PriceOverrides = ({
           <RadioGroup.Root
             value={mode}
             onValueChange={(value) => setMode(value)}
-            className="flex items-center pt-2"
+            className="pt-2 flex items-center"
           >
             <RadioGroup.SimpleItem
               value={MODES.SELECTED_ONLY}
@@ -101,11 +101,11 @@ const PriceOverrides = ({
           </RadioGroup.Root>
         )}
         {mode === MODES.SELECTED_ONLY && !isEdit && (
-          <div className="flex flex-col gap-2 pt-6">
+          <div className="pt-6 flex flex-col gap-2">
             {variants.map((variant, idx) => (
               <div
                 id={variant.id}
-                className="rounded-rounded border border-grey-20 py-2.5 px-3"
+                className="py-2.5 px-3 border border-grey-20 rounded-rounded"
               >
                 <ControlledCheckbox
                   control={control}
@@ -147,10 +147,10 @@ const PriceOverrides = ({
         </div>
       </Modal.Content>
       <Modal.Footer>
-        <div className="flex h-8 w-full justify-end">
+        <div className="flex w-full h-8 justify-end">
           <Button
             variant="ghost"
-            className="mr-2 w-32 justify-center rounded-rounded text-small"
+            className="mr-2 w-32 text-small justify-center rounded-rounded"
             size="large"
             onClick={onClose}
           >
@@ -158,7 +158,7 @@ const PriceOverrides = ({
           </Button>
           <Button
             size="large"
-            className="justify-center rounded-rounded text-small"
+            className="text-small justify-center rounded-rounded"
             variant="primary"
             onClick={onClick}
             loading={isSubmitting}
@@ -198,7 +198,7 @@ const ControlledCheckbox = ({
       render={({ field }) => {
         return (
           <Checkbox
-            className="inter-small-regular shrink-0"
+            className="shrink-0 inter-small-regular"
             {...props}
             {...field}
             checked={variants?.some((variant) => variant === value)}

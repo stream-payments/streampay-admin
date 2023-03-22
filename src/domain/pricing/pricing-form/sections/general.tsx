@@ -17,7 +17,7 @@ const General = () => {
       tooltip="General information for the price list."
       value="general"
     >
-      <div className="accordion-margin-transition flex flex-col gap-y-small group-radix-state-open:mt-5">
+      <div className="flex flex-col gap-y-small group-radix-state-open:mt-5 accordion-margin-transition">
         <InputField
           label="Name"
           required

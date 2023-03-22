@@ -14,7 +14,7 @@ const useGiftCardTableColums = () => {
         Cell: ({ cell: { value }, index }) => (
           <Table.Cell
             key={index}
-            className="w-[20%] pl-2 text-grey-90 group-hover:text-violet-60"
+            className="text-grey-90 group-hover:text-violet-60 w-[20%] pl-2"
           >
             {value}
           </Table.Cell>
@@ -26,7 +26,7 @@ const useGiftCardTableColums = () => {
         Cell: ({ cell: { value }, index }) => (
           <Table.Cell
             key={index}
-            className="w-[10%] pl-2 text-grey-90 group-hover:text-violet-60"
+            className="text-grey-90 group-hover:text-violet-60 w-[10%] pl-2"
           >
             {value && value?.display_id ? (
               `#${value.display_id}`
@@ -80,14 +80,14 @@ const useGiftCardTableColums = () => {
       },
       {
         Header: () => (
-          <div className="flex w-full justify-end rounded-rounded pr-2">
+          <div className="pr-2 flex rounded-rounded w-full justify-end">
             Created
           </div>
         ),
         accessor: "created_at",
         Cell: ({ cell: { value }, index }) => (
           <Table.Cell className="pr-2" key={index}>
-            <div className="flex w-full justify-end rounded-rounded">
+            <div className="flex rounded-rounded w-full justify-end">
               {moment(value).format("MMM Do YYYY")}
             </div>
           </Table.Cell>

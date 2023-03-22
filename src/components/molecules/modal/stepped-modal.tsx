@@ -139,7 +139,7 @@ const SteppedModal: React.FC<SteppedProps> = ({
     >
       <Modal.Body
         className={clsx(
-          "flex max-h-full flex-col justify-between transition-transform duration-100"
+          "transition-transform flex flex-col justify-between duration-100 max-h-full"
         )}
       >
         <Modal.Header handleClose={resetAndClose}>
@@ -149,20 +149,20 @@ const SteppedModal: React.FC<SteppedProps> = ({
               (lastScreenIsSummary &&
                 context.currentStep !== steps.length - 1 && (
                   <div className="flex items-center">
-                    <span className="inter-small-regular mr-4 w-[70px] text-grey-50">{`Step ${
+                    <span className="text-grey-50 inter-small-regular w-[70px] mr-4">{`Step ${
                       context.currentStep + 1
                     } of ${steps.length}`}</span>
                     {steps.map((_, i) => (
                       <span
                         key={i}
                         className={clsx(
-                          "mr-3 h-2 w-2 rounded-full",
+                          "w-2 h-2 rounded-full mr-3",
                           {
                             "bg-grey-20": i > context.currentStep,
                             "bg-violet-60": context.currentStep >= i,
                           },
                           {
-                            "outline outline-4 outline-violet-20":
+                            "outline-4 outline outline-violet-20":
                               context.currentStep === i,
                           }
                         )}
@@ -175,7 +175,7 @@ const SteppedModal: React.FC<SteppedProps> = ({
         <Modal.Content>{steps[context.currentStep]}</Modal.Content>
       </Modal.Body>
       <Modal.Footer>
-        <div className="flex w-full justify-end gap-x-xsmall">
+        <div className="flex justify-end w-full gap-x-xsmall">
           <Button
             variant="ghost"
             size="small"

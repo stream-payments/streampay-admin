@@ -26,7 +26,7 @@ type BasicFocusModalProps = {
 const FocusModal: IFocusModal = ({ className, children }) => (
   <div
     className={clsx(
-      "absolute inset-0 z-50 flex flex-col items-center bg-grey-0",
+      "absolute inset-0 bg-grey-0 z-50 flex flex-col items-center",
       className
     )}
   >
@@ -37,7 +37,7 @@ const FocusModal: IFocusModal = ({ className, children }) => (
 FocusModal.Header = ({ children, className }) => (
   <div
     className={clsx(
-      "flex w-full justify-center border-b border-b-grey-20 py-4",
+      "w-full border-b py-4 border-b-grey-20 flex justify-center",
       className
     )}
   >
@@ -46,7 +46,7 @@ FocusModal.Header = ({ children, className }) => (
 )
 
 FocusModal.Main = ({ children, className }) => (
-  <div className={clsx("h-full w-full overflow-y-auto px-8", className)}>
+  <div className={clsx("w-full px-8 overflow-y-auto h-full", className)}>
     {children}
   </div>
 )
@@ -79,21 +79,21 @@ const BasicFocusModalHeader: React.FC<BasicFocusModalProps> = ({
 }) => {
   return (
     <FocusModal.Header>
-      <div className="flex w-full justify-between px-8 medium:w-8/12">
+      <div className="medium:w-8/12 w-full px-8 flex justify-between">
         <Button
           size="small"
           variant="ghost"
           onClick={handleClose}
-          className="h-8 w-8 rounded-rounded border"
+          className="border rounded-rounded w-8 h-8"
         >
           <CrossIcon size={20} />
         </Button>
-        <div className="flex gap-x-small">
+        <div className="gap-x-small flex">
           <Button
             onClick={handleClose}
             size="small"
             variant="ghost"
-            className="rounded-rounded border"
+            className="border rounded-rounded"
           >
             {cancelText || "Cancel"}
           </Button>

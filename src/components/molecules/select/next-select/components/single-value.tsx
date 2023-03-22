@@ -26,12 +26,12 @@ const SingleValue = <
           "single-value--is-disabled": isDisabled,
         },
         clsx(
-          "absolute top-1/2 -translate-y-1/2 overflow-hidden overflow-ellipsis whitespace-nowrap",
+          "overflow-hidden absolute top-1/2 -translate-y-1/2 whitespace-nowrap overflow-ellipsis",
           className
         )
       )}
     >
-      <div className="inter-base-regular flex items-center gap-x-xsmall">
+      <div className="flex items-center gap-x-xsmall inter-base-regular">
         {prefix && <span className="inter-base-semibold">{prefix}</span>}
         {children}
       </div>

@@ -3,7 +3,7 @@ import {
   useAdminGetDiscountByCode,
   useAdminShippingOptions,
 } from "medusa-react"
-import React, { useContext, useEffect, useMemo, useState } from "react"
+import { useContext, useEffect, useMemo, useState } from "react"
 import { useWatch } from "react-hook-form"
 import Avatar from "../../../../components/atoms/avatar"
 import Button from "../../../../components/fundamentals/button"
@@ -64,9 +64,12 @@ const Summary = () => {
     name: "custom_shipping_price",
   })
 
-  const { discount, status } = useAdminGetDiscountByCode(discountCode!, {
-    enabled: !!discountCode,
-  })
+  const { discount, status, isFetching } = useAdminGetDiscountByCode(
+    discountCode!,
+    {
+      enabled: !!discountCode,
+    }
+  )
 
   const { shipping_options } = useAdminShippingOptions(
     { region_id: region?.value },
@@ -211,18 +214,17 @@ const Summary = () => {
                   <CrossIcon size={20} />
                 </Button>
               </div>
-              {discError && (
-                <div className="pt-2">
-                  <span className="text-rose-50">{discError}</span>
-                </div>
-              )}
             </div>
-            <div className="mt-4 flex w-full justify-end ">
+
+            <div className="space-between mt-4 flex w-full justify-between ">
+              <div className="pt-2">
+                {discError && <span className="text-rose-50">{discError}</span>}
+              </div>
               <Button
                 className="h-full border border-grey-20"
                 variant="ghost"
                 size="small"
-                loading={status === "loading"}
+                loading={isFetching}
                 onClick={() => handleAddDiscount()}
               >
                 <PlusIcon size={20} />

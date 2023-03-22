@@ -7,10 +7,10 @@ import Badge from "../../../components/fundamentals/badge"
 
 export const TaxRuleItem = ({ onEdit, onDelete, index, name, description }) => {
   return (
-    <div className="flex items-center gap-base rounded-rounded border p-base">
+    <div className="p-base border rounded-rounded flex gap-base items-center">
       <div>
         <Badge
-          className="inter-base-semibold flex h-[40px] w-[40px] items-center justify-center"
+          className="inter-base-semibold flex justify-center items-center w-[40px] h-[40px]"
           variant="default"
         >
           §{index}
@@ -41,3 +41,4 @@ export const TaxRuleItem = ({ onEdit, onDelete, index, name, description }) => {
     </div>
   )
 }
+

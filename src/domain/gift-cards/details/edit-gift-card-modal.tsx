@@ -81,7 +81,7 @@ const EditGiftCardModal = ({
             />
           </Modal.Content>
           <Modal.Footer>
-            <div className="flex w-full justify-end">
+            <div className="w-full flex justify-end">
               <Button
                 variant="ghost"
                 size="small"

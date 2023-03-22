@@ -42,10 +42,10 @@ const ConfirmationPrompt: React.FC<ConfirmationPromptProps> = ({
           </div>
         </Modal.Content>
         <Modal.Footer>
-          <div className="flex h-8 w-full justify-end">
+          <div className="flex w-full h-8 justify-end">
             <Button
               variant="ghost"
-              className="mr-2 w-24 justify-center text-small"
+              className="mr-2 w-24 text-small justify-center"
               size="small"
               onClick={handleClose}
             >
@@ -54,7 +54,7 @@ const ConfirmationPrompt: React.FC<ConfirmationPromptProps> = ({
             <Button
               loading={isLoading}
               size="small"
-              className="w-24 justify-center text-small"
+              className="w-24 text-small justify-center"
               variant="primary"
               onClick={handleSubmit}
               disabled={isLoading}

@@ -47,10 +47,10 @@ const AddConditionsModal = ({
 
   return (
     <LayeredModal context={layeredModalContext} handleClose={onClose}>
-      <Modal.Body className="flex h-[calc(100vh-134px)] flex-col">
+      <Modal.Body className="h-[calc(100vh-134px)] flex flex-col">
         <Modal.Header handleClose={onClose}>
           <span className="inter-xlarge-semibold">Add Conditions</span>
-          <span className="mt-6 flex items-center gap-1 font-semibold text-grey-90">
+          <span className="font-semibold text-grey-90 mt-6 flex items-center gap-1">
             Choose a condition type{" "}
             <IconTooltip content="You can only add one of each type of condition" />
           </span>
@@ -60,7 +60,7 @@ const AddConditionsModal = ({
           {items.length ? (
             items.map((t) => <ConditionTypeItem key={t.value} {...t} />)
           ) : (
-            <div className="flex h-full flex-1 flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center flex-1 h-full">
               <span className="inter-base-regular text-grey-40">
                 Can't add anymore conditions
               </span>
@@ -69,10 +69,10 @@ const AddConditionsModal = ({
         </Modal.Content>
 
         <Modal.Footer>
-          <div className="flex h-8 w-full justify-end">
+          <div className="flex w-full h-8 justify-end">
             <Button
               variant="ghost"
-              className="mr-2 w-32 justify-center text-small"
+              className="mr-2 w-32 text-small justify-center"
               size="small"
               onClick={onClose}
             >
@@ -86,7 +86,7 @@ const AddConditionsModal = ({
                 onClose()
               }}
               size="small"
-              className="w-32 justify-center text-small"
+              className="w-32 text-small justify-center"
               variant="primary"
             >
               Save
@@ -104,7 +104,7 @@ const ConditionTypeItem: React.FC<ConditionItem> = (props) => {
   return (
     <button
       onClick={onClick}
-      className="border-1 mb-2 flex w-full cursor-pointer items-center justify-between rounded-lg border p-4 transition-all hover:bg-grey-5"
+      className="rounded-lg border border-1 p-4 mb-2 cursor-pointer hover:bg-grey-5 transition-all w-full flex items-center justify-between"
     >
       <div className="flex flex-col items-start">
         <div className="font-semibold ">{label}</div>

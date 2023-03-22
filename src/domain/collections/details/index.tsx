@@ -113,9 +113,9 @@ const CollectionDetails = () => {
           path="/a/products?view=collections"
           label="Back to Collections"
         />
-        <div className="mb-large rounded-rounded border border-grey-20 bg-grey-0 py-large px-xlarge">
+        <div className="rounded-rounded py-large px-xlarge border border-grey-20 bg-grey-0 mb-large">
           {isLoading || !collection ? (
-            <div className="flex h-12 w-full items-center">
+            <div className="flex items-center w-full h-12">
               <Spinner variant="secondary" size="large" />
             </div>
           ) : (
@@ -167,7 +167,7 @@ const CollectionDetails = () => {
             },
           ]}
         >
-          <p className="inter-base-regular mt-xsmall mb-base text-grey-50">
+          <p className="text-grey-50 inter-base-regular mt-xsmall mb-base">
             To start selling, all you need is a name, price, and image.
           </p>
           {collection && (

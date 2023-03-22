@@ -38,11 +38,11 @@ export const ProductSelector = ({ items, onChange }) => {
         Cell: ({ row: { original } }) => {
           return (
             <div className="flex items-center">
-              <div className="my-1.5 mr-4 flex h-[40px] w-[30px] items-center overflow-hidden rounded-sm">
+              <div className="h-[40px] w-[30px] my-1.5 flex items-center mr-4 rounded-sm overflow-hidden">
                 {original.thumbnail ? (
                   <img
                     src={original.thumbnail}
-                    className="h-full rounded-soft object-cover"
+                    className="h-full object-cover rounded-soft"
                   />
                 ) : (
                   <ImagePlaceholder />

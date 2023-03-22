@@ -37,7 +37,7 @@ const SearchBar: React.FC = () => {
         <div className="ml-5">
           <OSShortcut macModifiers="⌘" winModifiers="Ctrl" keys="K" />
         </div>
-        <span className="inter-base-regular ml-xsmall text-grey-40">
+        <span className="ml-xsmall text-grey-40 inter-base-regular">
           Search anything...
         </span>
       </button>

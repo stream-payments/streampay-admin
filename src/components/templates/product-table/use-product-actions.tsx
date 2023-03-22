@@ -50,8 +50,7 @@ const useProductActions = (product: Product) => {
             onSuccess: () => {
               notification(
                 "Success",
-                `Successfully ${
-                  product.status === "published" ? "unpublished" : "published"
+                `Successfully ${product.status === "published" ? "unpublished" : "published"
                 } product`,
                 "success"
               )

@@ -65,12 +65,12 @@ export const SelectableTable = <
   queryObject,
   paginate,
 }: SelectableTableProps<T>) => {
-  const memorizedData = useMemo(() => data || [], [data])
+  const memoizedData = useMemo(() => data || [], [data])
 
   const table = useTable<T>(
     {
       columns,
-      data: memorizedData,
+      data: memoizedData,
       manualPagination: true,
       initialState: {
         pageIndex: queryObject.offset / queryObject.limit,

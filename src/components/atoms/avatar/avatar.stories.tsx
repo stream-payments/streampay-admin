@@ -7,7 +7,7 @@ export default {
   component: Avatar,
 } as ComponentMeta<typeof Avatar>
 
-const Template = (args) => (
+const Template = args => (
   <div className="h-large w-large">
     <Avatar {...args} />
   </div>
@@ -18,7 +18,7 @@ User.args = {
   user: {
     first_name: "John",
     last_name: "Doe",
-    email: "contact@streamprotocol.org",
+    email: "avatar@streampay.shop",
   },
 }
 

@@ -28,7 +28,7 @@ const ProductResults = ({
                 index: offset + index,
               })}
               className={clsx(
-                "group rounded-rounded px-base py-1.5 focus:bg-grey-5",
+                "px-base py-1.5 group focus:bg-grey-5 rounded-rounded",
                 {
                   "bg-grey-5": selected === offset + index,
                 }
@@ -41,7 +41,7 @@ const ProductResults = ({
                 <div className="flex items-center gap-x-3">
                   <img
                     src={product.thumbnail}
-                    className="h-[32px] w-[24px] rounded object-cover"
+                    className="h-[32px] w-[24px] object-cover rounded"
                   />
                   <p className="inter-small-regular text-grey-90">
                     {product.title}
@@ -49,7 +49,7 @@ const ProductResults = ({
                 </div>
                 <span
                   className={clsx(
-                    "inter-small-regular text-grey-40 group-focus:visible",
+                    "group-focus:visible text-grey-40 inter-small-regular",
                     {
                       invisible: selected !== offset + index,
                     }

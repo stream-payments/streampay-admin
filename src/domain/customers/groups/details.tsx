@@ -37,7 +37,7 @@ const defaultQueryProps = {
  */
 function CustomersListPlaceholder() {
   return (
-    <div className="center flex h-full min-h-[756px] items-center justify-center">
+    <div className="h-full flex center justify-center items-center min-h-[756px]">
       <span className="text-xs text-gray-400">
         No customers in this group yet
       </span>
@@ -127,7 +127,7 @@ function CustomerGroupCustomersList(props: CustomerGroupCustomersListProps) {
     <BodyCard
       title="Customers"
       actionables={actions}
-      className="my-4 min-h-[756px] w-full"
+      className="w-full my-4 min-h-[756px]"
     >
       {showCustomersModal && (
         <EditCustomersTable

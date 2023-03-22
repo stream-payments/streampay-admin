@@ -205,7 +205,7 @@ const AddProductsTable: React.FC<AddProductsTableProps> = ({
           </TableContainer>
         </Modal.Content>
         <Modal.Footer>
-          <div className="flex w-full items-center justify-end gap-x-xsmall">
+          <div className="flex items-center justify-end gap-x-xsmall w-full">
             <Button
               variant="ghost"
               size="small"

@@ -161,13 +161,13 @@ const NewGiftCard = ({ onClose }: NewGiftCardProps) => {
             </div>
             <div className="mt-xlarge">
               <h3 className="inter-base-semibold">Thumbnail</h3>
-              <div className="mt-base h-[80px]">
+              <div className="h-[80px] mt-base">
                 {thumbnail ? (
                   <div className="flex items-center gap-x-6">
                     <img
                       src={thumbnail.url}
                       alt=""
-                      className="h-20 w-20 rounded-base object-cover object-center"
+                      className="w-20 h-20 rounded-base object-cover object-center"
                     />
                     <div className="flex flex-col gap-y-1">
                       <span className="inter-small-regular">
@@ -175,7 +175,7 @@ const NewGiftCard = ({ onClose }: NewGiftCardProps) => {
                       </span>
                       <div>
                         <button
-                          className="inter-small-semibold text-rose-50"
+                          className="text-rose-50 inter-small-semibold"
                           type="button"
                           onClick={() => setValue("thumbnail", null)}
                         >
@@ -236,7 +236,7 @@ const NewGiftCard = ({ onClose }: NewGiftCardProps) => {
                       <Button
                         variant="ghost"
                         size="large"
-                        className="h-10 w-10 text-grey-40"
+                        className="w-10 h-10 text-grey-40"
                         type="button"
                         onClick={() => remove(index)}
                       >
@@ -263,7 +263,7 @@ const NewGiftCard = ({ onClose }: NewGiftCardProps) => {
             </div>
           </Modal.Content>
           <Modal.Footer>
-            <div className="flex w-full items-center justify-end">
+            <div className="flex items-center justify-end w-full">
               <Button
                 type="submit"
                 variant="ghost"

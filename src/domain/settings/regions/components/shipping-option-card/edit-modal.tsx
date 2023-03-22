@@ -75,7 +75,7 @@ const EditModal = ({ open, onClose, option }: Props) => {
                 {option.data.id} via {option.provider_id}
               </p>
             </div>
-            <div className="my-xlarge h-px w-full bg-grey-20" />
+            <div className="w-full h-px bg-grey-20 my-xlarge" />
             <ShippingOptionForm
               form={form}
               region={option.region}
@@ -83,7 +83,7 @@ const EditModal = ({ open, onClose, option }: Props) => {
             />
           </Modal.Content>
           <Modal.Footer>
-            <div className="flex w-full items-center justify-end gap-x-xsmall">
+            <div className="flex items-center gap-x-xsmall justify-end w-full">
               <Button variant="secondary" size="small" onClick={closeAndReset}>
                 Cancel
               </Button>

@@ -65,7 +65,7 @@ const GiftCardDetails = () => {
       { ...data },
       {
         onSuccess: () => {
-          notification("Success", "Successfully updated Gift Card", "success")
+          notification("Success", "Succesfully updated Gift Card", "success")
           setShowEdit(false)
           setShowUpdateBalance(false)
         },
@@ -82,7 +82,7 @@ const GiftCardDetails = () => {
         previousRoute="/a/gift-cards"
       />
       {isLoading || !giftCard ? (
-        <div className="flex w-full items-center justify-center rounded-rounded border border-grey-20 bg-grey-0 py-xlarge">
+        <div className="w-full bg-grey-0 border border-grey-20 rounded-rounded py-xlarge flex items-center justify-center">
           <Spinner size={"large"} variant={"secondary"} />
         </div>
       ) : (
@@ -104,9 +104,9 @@ const GiftCardDetails = () => {
             actionables={actions}
           >
             <div className="flex justify-between">
-              <div className="mt-6 flex space-x-6 divide-x">
+              <div className="flex mt-6 space-x-6 divide-x">
                 <div className="flex flex-col">
-                  <div className="inter-smaller-regular mb-1 text-grey-50">
+                  <div className="inter-smaller-regular text-grey-50 mb-1">
                     Original amount
                   </div>
                   <div>
@@ -117,7 +117,7 @@ const GiftCardDetails = () => {
                   </div>
                 </div>
                 <div className="flex flex-col pl-6">
-                  <div className="inter-smaller-regular mb-1 text-grey-50">
+                  <div className="inter-smaller-regular text-grey-50 mb-1">
                     Balance
                   </div>
                   <div>
@@ -128,7 +128,7 @@ const GiftCardDetails = () => {
                   </div>
                 </div>
                 <div className="flex flex-col pl-6">
-                  <div className="inter-smaller-regular mb-1 text-grey-50">
+                  <div className="inter-smaller-regular text-grey-50 mb-1">
                     Created
                   </div>
                   <div>

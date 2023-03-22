@@ -101,7 +101,7 @@ const CurrentCurrenciesScreen = () => {
         />
       </Modal.Content>
       <Modal.Footer>
-        <div className="flex w-full items-center justify-end">
+        <div className="w-full justify-end flex items-center">
           <Button variant="primary" size="small" onClick={onClose}>
             Close
           </Button>
@@ -132,10 +132,10 @@ const TableActions = ({
   }
 
   return (
-    <div className="flex h-[34px] space-x-xsmall overflow-hidden">
+    <div className="flex space-x-xsmall h-[34px] overflow-hidden">
       <div className={clsx("transition-all duration-200", classes)}>
-        <div className="mb-2 flex h-[34px] items-center divide-x">
-          <span className="inter-small-regular mr-3 text-grey-50">
+        <div className="divide-x flex items-center h-[34px] mb-2">
+          <span className="mr-3 inter-small-regular text-grey-50">
             {numberOfSelectedRows} selected
           </span>
           <div className="flex space-x-xsmall pl-3">
@@ -157,7 +157,7 @@ const TableActions = ({
             </Button>
           </div>
         </div>
-        <div className="flex h-[34px] justify-end">
+        <div className="flex justify-end h-[34px]">
           <Button
             size="small"
             variant="ghost"

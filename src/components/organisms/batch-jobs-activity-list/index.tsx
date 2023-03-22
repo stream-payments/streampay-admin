@@ -67,11 +67,14 @@ const BatchJobActivityCard = (props: { batchJob: BatchJob }) => {
 
   const batchJob = useBatchJob(props.batchJob)
 
-  const { mutate: cancelBatchJob, error: cancelBatchJobError } =
-    useAdminCancelBatchJob(batchJob.id)
+  const {
+    mutate: cancelBatchJob,
+    error: cancelBatchJobError,
+  } = useAdminCancelBatchJob(batchJob.id)
   const { mutateAsync: deleteFile } = useAdminDeleteFile()
-  const { mutateAsync: createPresignedUrl } =
-    useAdminCreatePresignedDownloadUrl()
+  const {
+    mutateAsync: createPresignedUrl,
+  } = useAdminCreatePresignedDownloadUrl()
 
   const fileName = batchJob.result?.file_key ?? `${batchJob.type}.csv`
   const relativeTimeElapsed = getRelativeTime({
@@ -200,7 +203,7 @@ const BatchJobActivityCard = (props: { batchJob: BatchJob }) => {
         <Button
           onClick={onClick}
           size={"small"}
-          className={clsx("inter-small-regular flex justify-start", className)}
+          className={clsx("flex justify-start inter-small-regular", className)}
           variant={variant}
         >
           {text}
@@ -209,7 +212,7 @@ const BatchJobActivityCard = (props: { batchJob: BatchJob }) => {
     }
     return (
       (canDownload || canCancel) && (
-        <div className="mt-6 flex">
+        <div className="flex mt-6">
           {canDownload && (
             <div className="flex">
               {buildButton(onDeleteFile, "danger", "Delete")}
@@ -224,13 +227,13 @@ const BatchJobActivityCard = (props: { batchJob: BatchJob }) => {
 
   return (
     <ActivityCard
-      title={store?.name ?? "Medusa Team"}
+      title={store?.name ?? "StreamPay Team"}
       icon={<MedusaIcon className="mr-3" size={20} />}
       relativeTimeElapsed={relativeTimeElapsed.rtf}
       date={batchJob.created_at}
       shouldShowStatus={true}
     >
-      <div ref={activityCardRef} className="inter-small-regular flex flex-col">
+      <div ref={activityCardRef} className="flex flex-col inter-small-regular">
         <span>{batchJobActivityDescription}</span>
 
         {getBatchJobFileCard()}

@@ -52,7 +52,7 @@ const CurrencySettings = () => {
   if (status === "loading" || !store) {
     // temp, perhaps use skeletons?
     return (
-      <div className="flex h-[calc(100vh-64px)] w-full items-center justify-center">
+      <div className="w-full h-[calc(100vh-64px)] flex items-center justify-center">
         <Spinner variant="secondary" />
       </div>
     )
@@ -68,7 +68,7 @@ const CurrencySettings = () => {
       <div className="grid grid-cols-3 gap-base">
         <div className="col-span-2 flex flex-col gap-y-xsmall ">
           <Section title="Currencies">
-            <p className="inter-base-regular mt-2xsmall text-grey-50">
+            <p className="text-grey-50 inter-base-regular mt-2xsmall">
               Manage the markets that you will operate within.
             </p>
           </Section>
@@ -79,7 +79,7 @@ const CurrencySettings = () => {
             </div>
             <FeatureToggle featureFlag="tax_inclusive_pricing">
               <div className="cursor-default">
-                <div className="inter-small-semibold mb-base flex items-center justify-between text-grey-50">
+                <div className="inter-small-semibold text-grey-50 flex items-center justify-between mb-base">
                   <p>Currency</p>
                   <Tooltip
                     side="top"

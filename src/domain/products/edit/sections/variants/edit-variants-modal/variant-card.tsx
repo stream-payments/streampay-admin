@@ -118,28 +118,28 @@ export const VariantCard = ({
       ref={preview}
       data-handler-id={handlerId}
       className={clsx(
-        "grid h-16 translate-y-0 translate-x-0 grid-cols-[32px_1fr_1fr_48px] rounded-rounded py-xsmall pl-xsmall pr-base transition-all focus-within:bg-grey-5 hover:bg-grey-5",
+        "grid grid-cols-[32px_1fr_1fr_48px] transition-all rounded-rounded hover:bg-grey-5 focus-within:bg-grey-5 h-16 py-xsmall pl-xsmall pr-base translate-y-0 translate-x-0",
         {
           "bg-grey-5 opacity-50": isDragging,
         }
       )}
     >
       <div
-        className="flex cursor-move items-center justify-center text-grey-40"
+        className="text-grey-40 cursor-move flex items-center justify-center"
         ref={ref}
       >
         <GripIcon size={20} />
       </div>
-      <div className="ml-base flex flex-col justify-center text-left">
+      <div className="flex flex-col text-left ml-base justify-center">
         <p className="inter-base-semibold">
           {title}
           {sku && (
-            <span className="inter-base-regular text-grey-50">({sku})</span>
+            <span className="text-grey-50 inter-base-regular">({sku})</span>
           )}
         </p>
         {ean && <span className="inter-base-regular text-grey-50">{ean}</span>}
       </div>
-      <div className="flex items-center justify-end text-right">
+      <div className="text-right flex items-center justify-end">
         <InputField
           {...register(`variants.${index}.inventory_quantity`, {
             min: FormValidator.nonNegativeNumberRule("Inventory"),
@@ -158,7 +158,7 @@ export const VariantCard = ({
           customTrigger={
             <Button
               variant="ghost"
-              className="flex h-xlarge w-xlarge items-center justify-center p-0 text-grey-50"
+              className="w-xlarge h-xlarge p-0 flex items-center justify-center text-grey-50"
             >
               <MoreHorizontalIcon size={20} />
             </Button>
