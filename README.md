@@ -1,9 +1,10 @@
 <p align="center">
   <a href="https://admin.streampay.shop">
+    <img alt="StreamPay" src="https://i.imgur.com/3jUHsfu.png" width="100" />
   </a>
 </p>
 <h1 align="center">
-  StreamPay Admin UI
+  StreamPay Admin
 </h1>
 <p align="center">
 Headless commerce platform
@@ -55,7 +56,7 @@ medusa user -e some@email.com -p some-password
 ```
 Alternatively, if you've seeded your server with our dummy data, you can use the following credentials:
 ```
-admin@medusa-test.com // supersecret
+admin@streampay.shop // supersecret
 ```
 
 ### Features
