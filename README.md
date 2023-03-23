@@ -4,13 +4,11 @@
   </a>
 </p>
 <h1 align="center">
-  StreamPay Admin
+  StreamPay - Commerce Admin UI
 </h1>
 <p align="center">
 A headless commerce platform is a type of e-commerce platform that separates the front-end presentation layer (also known as the "head") from the back-end e-commerce functionality. In a headless commerce platform, the front-end user interface can be built using any technology or framework, while the back-end 
-e-commerce functionality, including product catalog, shopping cart, checkout, payments, and order management, is delivered through an API. The headless approach offers more flexibility and customization for online retailers to create unique and personalized experiences for their customers. By decoupling the front-end and back-end, businesses can easily adapt to new trends, implement new technologies, and integrate with third-party tools without having to completely rebuild their entire e-commerce platform.
-<p align="center">
-Some of the benefits of a headless commerce platform include faster time-to-market, reduced development costs, improved scalability, and increased agility. However, it may require more technical expertise to implement and maintain, and may not be suitable for all businesses depending on their specific needs and resources.
+e-commerce functionality, including product catalog, shopping cart, checkout, payments, and order management, is delivered through an API. The headless approach offers more flexibility and customization for online retailers to create unique and personalized experiences for their customers. By decoupling the front-end and back-end, businesses can easily adapt to new trends, implement new technologies, and integrate with third-party tools without having to completely rebuild their entire e-commerce platform. Some of the benefits of a headless commerce platform include faster time-to-market, reduced development costs, improved scalability, and increased agility. However, it may require more technical expertise to implement and maintain, and may not be suitable for all businesses depending on their specific needs and resources.
 <p align="center">
 </p>
 <p align="center">
