@@ -38,7 +38,7 @@ export default defineConfig({
         env.GATSBY_MEDUSA_BACKEND_URL ||
         env.GATSBY_STORE_URL ||
         "https://api.streampay.shop"
-        "https://streampay.shop"
+        "https://stream-commerce-backend.herokuapp.com"
     ),
   },
   optimizeDeps: {
