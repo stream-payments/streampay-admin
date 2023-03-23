@@ -23,7 +23,7 @@ const AnalyticsConfigForm = ({ form }: Props) => {
 
   useEffect(() => {
     if (watchOptOut) {
-      setValue(path("anonymize"), false)
+      setValue(path("anonymize"), true)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [watchOptOut])
